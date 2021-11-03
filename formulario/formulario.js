@@ -117,6 +117,8 @@ function valida() {
   ) {
     mensajes.style.display = "block";
     mensajes.innerHTML = "Datos enviados";
+    mensajes.tabIndex = 0;
+    mensajes.focus();
   } else {
     mensajes.style.display = "block";
     mensajes.innerHTML = "";
