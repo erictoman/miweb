@@ -1,0 +1,46 @@
+#panel {
+  width: 100%;
+}
+
+.tabs {
+  overflow: hidden;
+}
+
+.tab {
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+  float: left;
+  cursor: pointer;
+  padding: 1rem;
+}
+.tab:focus {
+  background-color: #5caef3;
+}
+
+.panel {
+  background: #f1f1f1;
+  display: none;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.panel > div {
+  display: inline-block;
+  width: calc(20% - 2rem);
+  margin-right: 1%;
+  background: #257381;
+}
+
+.panel > div:last-child {
+  margin-right: 0%;
+}
+
+.panel > div a {
+  display: block;
+  color: white;
+  padding: 1rem;
+}
+
+.open {
+  display: block;
+}

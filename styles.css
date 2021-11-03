@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+body {
+  background: #eee;
+}
+main {
+  padding: 2rem;
+  margin: 1rem 0;
+}
+header,
+footer {
+  padding: 0;
+  background: #145883;
+}
+footer {
+  padding: 1rem;
+  border-top: 0.5rem solid #333;
+  background: linear-gradient(to bottom, #07446a 5%, #033c5f 100%);
+}
+footer * {
+  color: white;
+  line-height: 150%;
+}
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+h1,
+.titulo_principal {
+  font-size: 2rem;
+}
+.bar {
+  background: #2222226e;
+  width: 50%;
+  float: left;
+}
+.bar > * {
+  padding: 0.3rem;
+}
+
+#reg_login * {
+  text-align: right;
+  color: white;
+}
+.separador {
+  height: 1px;
+  background: #ccc;
+  margin: 1.5rem 0;
+}
+.oculto {
+  display: block;
+  text-indent: -9999px;
+  height: 0.01rem;
+}
+.none {
+  display: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.row {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.col {
+  float: left;
+  margin-bottom: 1rem;
+}
+.col_1-1 {
+  width: 100%;
+}
+.col_1-3 {
+  width: 33.33%;
+}
+.col_2-3 {
+  width: 66.66%;
+}
+.col_1-2 {
+  width: 50%;
+}
+.col_1-4 {
+  width: 25%;
+}
+.col_1-5 {
+  width: 20%;
+}
+.card {
+  display: block;
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  min-height: calc(100% - 2rem);
+}
+.row .col:last-child .card {
+  margin-right: 0;
+}
+
+header .relleno {
+  height: 7rem;
+  background: url("src/bg.jpg");
+  background-size: 50% auto;
+  background-repeat: repeat-x;
+}
+#redes_sociales p {
+  text-align: center;
+}
+#redes_sociales a {
+  display: inline-block;
+  width: 2.5rem;
+  margin-left: 0.3rem;
+}
+#redes_sociales img {
+  width: 100%;
+}
+
+/*productos*/
+.productos {
+  width: 50%;
+}
+.productos table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+.productos caption {
+  text-align: left;
+  background: linear-gradient(to bottom, #145883 5%, #196fa6 100%);
+  padding: 0.5rem;
+  color: white;
+}
+.productos .tabdes {
+  width: calc(100% - 1rem);
+  text-align: left;
+  background: linear-gradient(to bottom, #145883 5%, #196fa6 100%);
+  padding: 0.5rem;
+  color: white;
+  margin: 1rem 0 -2rem 0;
+}
+.productos .rw-color td {
+  background: #fcfaed;
+}
+.productos td,
+.productos th {
+  border: solid 1px #ccc;
+  padding: 0.5rem;
+}
+.productos th,
+.productos .celtit {
+  background: linear-gradient(to bottom, #ccc 5%, #c3c3c3 100%) !important;
+  border: solid 1px white !important;
+}
+
+/*index*/
+#index .titulo_principal {
+  display: none;
+}
+#destacado img {
+  width: 40%;
+  float: left;
+  margin-right: 1rem;
+}
+#destacado .dest_desc {
+  display: block;
+  float: left;
+  width: 55%;
+}
+#noticias .noticia {
+  display: block;
+  margin-top: 1rem;
+}
+#noticias .noticia a {
+  display: block;
+  padding-top: 0.2rem;
+}
+#noticias .noticia a img {
+  display: block;
+  float: left;
+  height: 2rem;
+  width: 2rem;
+  max-width: 100%;
+  margin-right: 0.5rem;
+}
+#noticias .noticia a .not_desc {
+  display: block;
+  float: left;
+}
+#noticias .noticia a .not_fecha {
+  display: block;
+}
+#interes {
+  background: white;
+  border-radius: 1rem;
+}
+#interes h2 {
+  padding: 1rem 0;
+}
+#interes a {
+  text-align: center;
+  height: 7rem;
+}
+#interes img {
+  height: 40%;
+  width: auto;
+  padding-top: 1rem;
+}
+#interes a .int_desc {
+  display: block;
+  padding-top: 1rem;
+}
+#interes .card {
+  background: #eff0e9;
+  border-radius: 0;
+}
+#interes .row {
+  margin: 0.5rem 1rem;
+  width: calc(100% - 2rem);
+}
+.color-blanco {
+  color: white;
+  margin-left: 1rem;
+}

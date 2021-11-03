@@ -1,0 +1,60 @@
+#menubar > ul,
+#menubar ul ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#menubar > ul {
+  background: linear-gradient(to bottom, #333 5%, #111 100%);
+}
+
+#menubar > ul > li {
+  float: left;
+}
+
+#menubar > ul a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#menubar ul li :focus {
+  background-color: #5caef3;
+}
+
+#menubar ul ul {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 160px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#menubar ul ul a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown::before {
+  content: "";
+  display: inline-block;
+  border-top: 7px solid white;
+  border-right: 7px solid #222;
+  border-left: 7px solid #222;
+  border-bottom: none;
+  padding-bottom: 3px;
+  margin-right: 5px;
+}
+
+.open {
+  display: block !important;
+}

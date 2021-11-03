@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!--global-->
+    <link href="styles.css" rel="stylesheet" />
+    <!--menu-->
+    <link href="menu/menu.css" rel="stylesheet" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <a href="#header" class="color-blanco">Ir al encabezado</a
+        ><a href="#main" class="color-blanco">Ir al contenido</a
+        ><a href="#footer" class="color-blanco">Ir al pie de pagina</a>
+      </div>
+      <div class="relleno clearfix">
+        <div class="bar">
+          <p>&nbsp;</p>
+        </div>
+        <div id="reg_login" class="bar">
+          <p><a href="registro.html">Registrarme / Iniciar sesión</a></p>
+        </div>
+      </div>
+      <id id="menubar" aria-label="Menu principal">
+        <ul role="menubar">
+          <li role="none">
+            <a
+              id="menuInicio"
+              href="index.html"
+              role="menuitem"
+              aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          <!--Se pone así porque estamos en la pagina de inicio-->
+          <li role="none">
+            <a
+              id="menuNosotros"
+              href="nosotros.html"
+              role="menuitem"
+              aria-current="false"
+              >Nosotros</a
+            >
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              id="menuTienda"
+              onclick="preventDefault(e);"
+              class="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-current="false"
+              role="menuitem"
+              >Tienda</a
+            >
+            <ul role="menu">
+              <li role="none">
+                <a
+                  id="menuProductos"
+                  href="productos.html"
+                  role="menuitem"
+                  aria-current="false"
+                  >Productos</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  id="menuServicios"
+                  href="servicios.html"
+                  role="menuitem"
+                  aria-current="false"
+                  >Servicios</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <a
+              id="menuContacto"
+              href="contacto.html"
+              role="menuitem"
+              aria-current="false"
+              >Contacto</a
+            >
+          </li>
+          <li role="none">
+            <a
+              id="menuMapaSitio"
+              href="mapaSitio.html"
+              role="menuitem"
+              aria-current="false"
+              >Mapa de Sitio</a
+            >
+          </li>
+        </ul>
+      </id>
+      <!--end menu-->
+      <script src="menu/menu.js"></script>
+    </header>
+    <main id="main">
+      <p class="titulo_principal"><h1 tabindex="0">Productos</h1></p>
+      <div class="productos">
+        <div id="catA">
+          <table tabindex="0" class="productos">
+            <caption>
+              Categoria A
+            </caption>
+            <tr>
+              <th scope="col" class="celtit">Productos</th>
+              <th scope="col" class="celtit">Precio</th>
+              <th scope="col" class="celtit">Caracteristicas</th>
+            </tr>
+            <tr class="rw-color">
+              <th scope="row" class="celtit">A1</th>
+              <td>$219.00</td>
+              <td>
+                <ul>
+                  <li>Caracteristica 1</li>
+                  <li>Caracteristica 2</li>
+                  <li>Caracteristica 3</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="celtit">A2</th>
+              <td>$437.00</td>
+              <td>
+                <ul>
+                  <li>Caracteristica 1</li>
+                  <li>Caracteristica 2</li>
+                  <li>Caracteristica 3</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="rw-color">
+              <th scope="row" class="celtit">A3</th>
+              <td>$675.50</td>
+              <td>
+                <ul>
+                  <li>Caracteristica 1</li>
+                  <li>Caracteristica 2</li>
+                  <li>Caracteristica 3</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="catB">
+          <table tabindex="0" class="productos" aria-label="Tabla de productos">
+            <caption>
+              Categoria B
+            </caption>
+            <tr>
+              <th class="celtit" id="h1-1" rowspan="3">Pago</th>
+              <th class="celtit" id="h1-2" colspan="4">Productos</th>
+            </tr>
+            <tr>
+              <th class="celtit" headers="h1-2" id="h2-1" colspan="2">
+                Plan A
+              </th>
+              <th class="celtit" headers="h1-2" id="h2-2" colspan="2">
+                Plan B
+              </th>
+            </tr>
+            <tr>
+              <th class="celtit" id="h3-1" headers="h2-1">B1</th>
+              <th class="celtit" id="h3-2" headers="h2-1">B2</th>
+              <th class="celtit" id="h3-3" headers="h2-2">B3</th>
+              <th class="celtit" id="h3-4" headers="h2-2">B4</th>
+            </tr>
+            <tr class="rw-color">
+              <th headers="h1-1" class="celtit">
+                7 días antes de fecha límite
+              </th>
+              <td headers="h3-1">$92.00</td>
+              <td headers="h3-2">$285.00</td>
+              <td headers="h3-3">$478.00</td>
+              <td headers="h3-4">$478.00</td>
+            </tr>
+            <tr>
+              <th headers="h1-1" class="celtit">Antes/En fecha límite</th>
+              <td headers="h3-1">$100.00</td>
+              <td headers="h3-2">$300.00</td>
+              <td headers="h3-3">$500.00</td>
+              <td headers="h3-4">$800.00</td>
+            </tr>
+            <tr class="rw-color">
+              <th headers="h1-1" class="celtit">Después de fecha límite</th>
+              <td headers="h3-1">$130.00</td>
+              <td headers="h3-2">$325.00</td>
+              <td headers="h3-3">$520.00</td>
+              <td headers="h3-4">$815.00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="row clearfix">
+        <div class="col col_1-5"></div>
+        <div class="col col_1-5">
+          <p>Derechos reservados 2020</p>
+          <p><br /></p>
+          <p>
+            <a href="#">Aviso de privacidad</a><br />
+            <a href="#">Términos y condiciones</a>
+          </p>
+        </div>
+        <div class="col col_1-5"></div>
+        <div id="redes_sociales" class="col col_1-5">
+          <p>
+            <a href="https://facebook.com" target="_blank"
+              ><img src="src/ico_facebook_w.png" alt="Abrir pagina de Facebook"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img src="src/ico_twitter_w.png" alt="Abrir pagina de Twitter"
+            /></a>
+            <a href="https://youtube.com" target="_blank"
+              ><img src="src/ico_youtube_w.png" alt="Abrir pagina de Youtube"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img
+                src="src/ico_instagram_w.png"
+                alt="Abrir pagina de Instagram"
+            /></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><img src="src/ico_linkedin_w.png" alt="Abrir pagina de Linkedin"
+            /></a>
+            <a href="https://web.whatsapp.com" target="_blank"
+              ><img src="src/ico_whatsapp_w.png" alt="Abrir contacto Whatsapp"
+            /></a>
+            <a href="https://pinterest.com" target="_blank"
+              ><img
+                src="src/ico_pinterest_w.png"
+                alt="Abrir pagina de Pinterest"
+            /></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

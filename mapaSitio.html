@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!--global-->
+    <link href="styles.css" rel="stylesheet" />
+    <!--menu-->
+    <link href="menu/menu.css" rel="stylesheet" />
+    <title>Mapa de sitio</title>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <a href="#header" class="color-blanco">Ir al encabezado</a
+        ><a href="#main" class="color-blanco">Ir al contenido</a
+        ><a href="#footer" class="color-blanco">Ir al pie de pagina</a>
+      </div>
+      <div class="relleno clearfix">
+        <div class="bar">
+          <p>&nbsp;</p>
+        </div>
+        <div id="reg_login" class="bar">
+          <p><a href="registro.html">Registrarme / Iniciar sesión</a></p>
+        </div>
+      </div>
+      <id id="menubar" aria-label="Menu principal">
+        <ul role="menubar">
+          <li role="none">
+            <a
+              id="menuInicio"
+              href="index.html"
+              role="menuitem"
+              aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          <!--Se pone así porque estamos en la pagina de inicio-->
+          <li role="none">
+            <a
+              id="menuNosotros"
+              href="nosotros.html"
+              role="menuitem"
+              aria-current="false"
+              >Nosotros</a
+            >
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              id="menuTienda"
+              onclick="preventDefault(e);"
+              class="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-current="false"
+              role="menuitem"
+              >Tienda</a
+            >
+            <ul role="menu">
+              <li role="none">
+                <a
+                  id="menuProductos"
+                  href="productos.html"
+                  role="menuitem"
+                  aria-current="false"
+                  >Productos</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  id="menuServicios"
+                  href="servicios.html"
+                  role="menuitem"
+                  aria-current="false"
+                  >Servicios</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <a
+              id="menuContacto"
+              href="contacto.html"
+              role="menuitem"
+              aria-current="false"
+              >Contacto</a
+            >
+          </li>
+          <li role="none">
+            <a
+              id="menuMapaSitio"
+              href="mapaSitio.html"
+              role="menuitem"
+              aria-current="false"
+              >Mapa de Sitio</a
+            >
+          </li>
+        </ul>
+      </id>
+      <!--end menu-->
+      <script src="menu/menu.js"></script>
+    </header>
+    <main id="main">
+      <h1 class="titulo_principal" tabindex="0">Mapa de Sitio</h1>
+      <ul>
+        <li>
+          <a id="menuInicioMS" href="index.html">Inicio</a>
+          <ul>
+            <li>
+              <a id="menuProductosMS" href="index.html#destacado">Destacado</a>
+            </li>
+            <li>
+              <a id="menuServiciosMS" href="index.html#noticias">Noticias</a>
+            </li>
+            <li>
+              <a id="menuServiciosMS" href="index.html#interes"
+                >Sitios de interes</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a id="menuNosotrosMS" href="nosotros.html">Nosotros</a>
+          <ul>
+            <li>
+              <a id="menuNosotrosMS" href="nosotros.html#mision">Misión</a>
+            </li>
+            <li>
+              <a id="menuNosotrosMS" href="nosotros.html#vision">Visión</a>
+            </li>
+            <li>
+              <a id="menuNosotrosMS" href="nosotros.html#objetivo">Objetivo</a>
+            </li>
+            <li><a id="menuNosotrosMS" href="nosotros.html#lema">Lema</a></li>
+          </ul>
+        </li>
+        <li>
+          <label>Tienda</label>
+          <ul>
+            <li>
+              <a id="menuProductosMS" href="productos.html">Productos</a>
+            </li>
+            <li>
+              <a id="menuServiciosMS" href="servicios.html">Servicios</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a id="menuContactoMS" href="contacto.html#contacto">Contacto</a>
+        </li>
+        <li><a id="menuMapaSitioMS" href="mapaSitio.html">Mapa de Sitio</a></li>
+      </ul>
+    </main>
+
+    <footer id="footer">
+      <div class="row clearfix">
+        <div class="col col_1-5"></div>
+        <div class="col col_1-5">
+          <p>Derechos reservados 2020</p>
+          <p><br /></p>
+          <p>
+            <a href="#">Aviso de privacidad</a><br />
+            <a href="#">Términos y condiciones</a>
+          </p>
+        </div>
+        <div class="col col_1-5"></div>
+        <div id="redes_sociales" class="col col_1-5">
+          <p>
+            <a href="https://facebook.com" target="_blank"
+              ><img src="src/ico_facebook_w.png" alt="Abrir pagina de Facebook"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img src="src/ico_twitter_w.png" alt="Abrir pagina de Twitter"
+            /></a>
+            <a href="https://youtube.com" target="_blank"
+              ><img src="src/ico_youtube_w.png" alt="Abrir pagina de Youtube"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img
+                src="src/ico_instagram_w.png"
+                alt="Abrir pagina de Instagram"
+            /></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><img src="src/ico_linkedin_w.png" alt="Abrir pagina de Linkedin"
+            /></a>
+            <a href="https://web.whatsapp.com" target="_blank"
+              ><img src="src/ico_whatsapp_w.png" alt="Abrir contacto Whatsapp"
+            /></a>
+            <a href="https://pinterest.com" target="_blank"
+              ><img
+                src="src/ico_pinterest_w.png"
+                alt="Abrir pagina de Pinterest"
+            /></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

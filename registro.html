@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!--global-->
+    <link href="styles.css" rel="stylesheet" />
+    <!--menu-->
+    <link href="menu/menu.css" rel="stylesheet" />
+    <!--form-->
+    <link href="formulario/formulario.css" rel="stylesheet" />
+    <script src="formulario/formulario.js"></script>
+    <title>Registro</title>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <a href="#header" class="color-blanco">Ir al encabezado</a
+        ><a href="#main" class="color-blanco">Ir al contenido</a
+        ><a href="#footer" class="color-blanco">Ir al pie de pagina</a>
+      </div>
+      <div class="relleno clearfix">
+        <div class="bar">
+          <p>&nbsp;</p>
+        </div>
+        <div id="reg_login" class="bar">
+          <p><a href="registro.html">Registrarme / Iniciar sesión</a></p>
+        </div>
+      </div>
+      <id id="menubar" aria-label="Menu principal">
+        <ul role="menubar">
+          <li role="none">
+            <a
+              id="menuInicio"
+              href="index.html"
+              role="menuitem"
+              aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          <!--Se pone así porque estamos en la pagina de inicio-->
+          <li role="none">
+            <a
+              id="menuNosotros"
+              href="nosotros.html"
+              role="menuitem"
+              aria-current="false"
+              >Nosotros</a
+            >
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              id="menuTienda"
+              onclick="preventDefault(e);"
+              class="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-current="false"
+              role="menuitem"
+              >Tienda</a
+            >
+            <ul role="menu">
+              <li role="none">
+                <a
+                  id="menuProductos"
+                  href="productos.html"
+                  role="menuitem"
+                  aria-current="false"
+                  >Productos</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  id="menuServicios"
+                  href="servicios.html"
+                  role="menuitem"
+                  aria-current="false"
+                  >Servicios</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <a
+              id="menuContacto"
+              href="contacto.html"
+              role="menuitem"
+              aria-current="false"
+              >Contacto</a
+            >
+          </li>
+          <li role="none">
+            <a
+              id="menuMapaSitio"
+              href="mapaSitio.html"
+              role="menuitem"
+              aria-current="false"
+              >Mapa de Sitio</a
+            >
+          </li>
+        </ul>
+      </id>
+      <!--end menu-->
+      <script src="menu/menu.js"></script>
+    </header>
+    <main id="main">
+      <h1 class="titulo_principal" tabindex="0">Registro</h1>
+      <div id="registro">
+        <div role="alert" id="mensajes"></div>
+        <form action="#" action="post" name="registro">
+          <table role="presentation">
+            <tr>
+              <td></td>
+              <td tabindex="0">
+                Los campos marcados con * son campos obligatorios
+              </td>
+            </tr>
+            <tr>
+              <td><label for="nombre">*Nombre: </label></td>
+              <td>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  aria-describedby="enombre"
+                />
+                <span id="enombre"
+                  >Deberá comenzar por nombre, seguido de apellidos. Ejemplo:
+                  Samuel Arteaga</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="edad">Edad:</label></td>
+              <td>
+                <input id="edad" type="number" name="edad" />
+                <p id="eedad"></p>
+              </td>
+            </tr>
+            <tr>
+              <td>Género</td>
+              <td>
+                <fieldset>
+                  <legend class="oculto">
+                    Selecciona una opción para género
+                  </legend>
+                  <input
+                    type="radio"
+                    name="genero"
+                    value="mujer"
+                    aria-describedby="emujer"
+                  /><span id="emujer">mujer&emsp;</span>
+                  <input
+                    type="radio"
+                    name="genero"
+                    value="hombre"
+                    aria-describedby="ehombre"
+                  /><span id="ehombre">hombre&emsp;</span>
+                  <input
+                    type="radio"
+                    name="genero"
+                    value="otro"
+                    aria-describedby="eotro"
+                  /><span id="eotro">otro</span>
+                  <p id="egenero"></p>
+                </fieldset>
+              </td>
+            </tr>
+            <fieldset>
+              <tr>
+                <td><label for="pais">País:</label></td>
+                <td>
+                  <select name="pais" id="pais">
+                    <option value="AL">Alemania</option>
+                    <option value="AR">Argentina</option>
+                    <option value="CA">Canadá</option>
+                    <option value="CH">China</option>
+                    <option value="CO">Corea</option>
+                    <option value="EU">Estados Unidos</option>
+                    <option value="FR">Francia</option>
+                    <option value="IN">India</option>
+                    <option value="EN">Inglaterra</option>
+                    <option value="IT">Italia</option>
+                    <option value="JP">Japón</option>
+                    <option value="MX" selected="selected">México</option>
+                    <option value="RU">Rusia</option>
+                    <option value="TA">Tailandia</option>
+                  </select>
+                  <p id="epais"></p>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="correo">*Correo:</label></td>
+                <td>
+                  <input
+                    type="text"
+                    id="correo"
+                    name="correo"
+                    aria-describedby="ecorreo"
+                  />
+                  <span id="ecorreo"
+                    >Deberá ser un correo válido en el que se le enviará un
+                    enlace para confirmar</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td><label for="telefono">Teléfono:</label></td>
+                <td>
+                  <fieldset>
+                    <legend class="oculto">
+                      Lada y teléfono correspondiente
+                    </legend>
+                    <input
+                      type="text"
+                      id="telefono"
+                      name="tellada"
+                      aria-label="lada"
+                    />
+                    -
+                    <input
+                      type="text"
+                      id="numero"
+                      name="telnum"
+                      aria-label="numero"
+                    />
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <td>Temas de interés</td>
+                <td>
+                  <fieldset>
+                    <legend class="oculto">
+                      Selecciona una o más opción de género
+                    </legend>
+                    <input
+                      type="checkbox"
+                      name="temInt"
+                      aria-describedby="cyt"
+                    /><span id="cyt">Ciencia y tecnología</span><br />
+                    <input
+                      type="checkbox"
+                      name="temInt"
+                      aria-describedby="mya"
+                    /><span id="mya">Música y artes</span><br />
+                    <input
+                      type="checkbox"
+                      name="temInt"
+                      aria-describedby="cyr"
+                    /><span id="cyr">Cocina y repostería</span><br />
+                    <input
+                      type="checkbox"
+                      name="temInt"
+                      aria-describedby="liter"
+                    /><span id="liter">Literatura</span><br />
+                    <input
+                      type="checkbox"
+                      name="temInt"
+                      aria-describedby="viajes"
+                    /><span id="viajes">Viajes</span>
+                    <p id="einteres"></p>
+                  </fieldset>
+                </td>
+              </tr>
+            </fieldset>
+
+            <tr>
+              <td colspan="2">
+                <label for="sobre">Algo sobre ti:</label> <br />
+                <input type="text" id="sobre" name="sobreTi" />
+                <p id="esobre"></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="passwrd">*Contraseña:</label></td>
+              <td>
+                <input
+                  type="password"
+                  id="passwrd"
+                  name="pwd"
+                  aria-describedby="descPsswrd"
+                />
+                <span id="descPsswrd" class="adicionalCampo"
+                  >Deberá componerse de 8 a 12 caracteres, contener al menos una
+                  mayúscula, una minúscula, un número, un caracter especial y
+                  sin espacios</span
+                >
+                <p id="epwd"></p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input
+                  type="checkbox"
+                  name="terminos"
+                  aria-describedby="aceptoTermycond"
+                />
+                <span id="aceptoTermycond"
+                  >*Acepto los
+                  <a href="http://www.google.com.mx" target="_blank"
+                    >términos y condiciones</a
+                  ></span
+                >
+                <p id="eterminos"></p>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <input
+                  type="submit"
+                  name="enviar"
+                  value="Enviar"
+                  id="enviar"
+                  onclick="valida();"
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="row clearfix">
+        <div class="col col_1-5"></div>
+        <div class="col col_1-5">
+          <p>Derechos reservados 2020</p>
+          <p><br /></p>
+          <p>
+            <a href="#">Aviso de privacidad</a><br />
+            <a href="#">Términos y condiciones</a>
+          </p>
+        </div>
+        <div class="col col_1-5"></div>
+        <div id="redes_sociales" class="col col_1-5">
+          <p>
+            <a href="https://facebook.com" target="_blank"
+              ><img src="src/ico_facebook_w.png" alt="Abrir pagina de Facebook"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img src="src/ico_twitter_w.png" alt="Abrir pagina de Twitter"
+            /></a>
+            <a href="https://youtube.com" target="_blank"
+              ><img src="src/ico_youtube_w.png" alt="Abrir pagina de Youtube"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img
+                src="src/ico_instagram_w.png"
+                alt="Abrir pagina de Instagram"
+            /></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><img src="src/ico_linkedin_w.png" alt="Abrir pagina de Linkedin"
+            /></a>
+            <a href="https://web.whatsapp.com" target="_blank"
+              ><img src="src/ico_whatsapp_w.png" alt="Abrir contacto Whatsapp"
+            /></a>
+            <a href="https://pinterest.com" target="_blank"
+              ><img
+                src="src/ico_pinterest_w.png"
+                alt="Abrir pagina de Pinterest"
+            /></a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
