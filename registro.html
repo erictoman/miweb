@@ -166,104 +166,102 @@
                 </fieldset>
               </td>
             </tr>
-            <fieldset>
-              <tr>
-                <td><label for="pais">País:</label></td>
-                <td>
-                  <select name="pais" id="pais">
-                    <option value="AL">Alemania</option>
-                    <option value="AR">Argentina</option>
-                    <option value="CA">Canadá</option>
-                    <option value="CH">China</option>
-                    <option value="CO">Corea</option>
-                    <option value="EU">Estados Unidos</option>
-                    <option value="FR">Francia</option>
-                    <option value="IN">India</option>
-                    <option value="EN">Inglaterra</option>
-                    <option value="IT">Italia</option>
-                    <option value="JP">Japón</option>
-                    <option value="MX" selected="selected">México</option>
-                    <option value="RU">Rusia</option>
-                    <option value="TA">Tailandia</option>
-                  </select>
-                  <p id="epais"></p>
-                </td>
-              </tr>
-              <tr>
-                <td><label for="correo">*Correo:</label></td>
-                <td>
+            <tr>
+              <td><label for="pais">País:</label></td>
+              <td>
+                <select name="pais" id="pais">
+                  <option value="AL">Alemania</option>
+                  <option value="AR">Argentina</option>
+                  <option value="CA">Canadá</option>
+                  <option value="CH">China</option>
+                  <option value="CO">Corea</option>
+                  <option value="EU">Estados Unidos</option>
+                  <option value="FR">Francia</option>
+                  <option value="IN">India</option>
+                  <option value="EN">Inglaterra</option>
+                  <option value="IT">Italia</option>
+                  <option value="JP">Japón</option>
+                  <option value="MX" selected="selected">México</option>
+                  <option value="RU">Rusia</option>
+                  <option value="TA">Tailandia</option>
+                </select>
+                <p id="epais"></p>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="correo">*Correo:</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="correo"
+                  name="correo"
+                  aria-describedby="ecorreo"
+                />
+                <span id="ecorreo"
+                  >Deberá ser un correo válido en el que se le enviará un enlace
+                  para confirmar</span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><label for="telefono">Teléfono:</label></td>
+              <td>
+                <fieldset>
+                  <legend class="oculto">
+                    Lada y teléfono correspondiente
+                  </legend>
                   <input
                     type="text"
-                    id="correo"
-                    name="correo"
-                    aria-describedby="ecorreo"
+                    id="telefono"
+                    name="tellada"
+                    aria-label="lada"
                   />
-                  <span id="ecorreo"
-                    >Deberá ser un correo válido en el que se le enviará un
-                    enlace para confirmar</span
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td><label for="telefono">Teléfono:</label></td>
-                <td>
-                  <fieldset>
-                    <legend class="oculto">
-                      Lada y teléfono correspondiente
-                    </legend>
-                    <input
-                      type="text"
-                      id="telefono"
-                      name="tellada"
-                      aria-label="lada"
-                    />
-                    -
-                    <input
-                      type="text"
-                      id="numero"
-                      name="telnum"
-                      aria-label="numero"
-                    />
-                  </fieldset>
-                </td>
-              </tr>
-              <tr>
-                <td>Temas de interés</td>
-                <td>
-                  <fieldset>
-                    <legend class="oculto">
-                      Selecciona una o más opción de género
-                    </legend>
-                    <input
-                      type="checkbox"
-                      name="temInt"
-                      aria-describedby="cyt"
-                    /><span id="cyt">Ciencia y tecnología</span><br />
-                    <input
-                      type="checkbox"
-                      name="temInt"
-                      aria-describedby="mya"
-                    /><span id="mya">Música y artes</span><br />
-                    <input
-                      type="checkbox"
-                      name="temInt"
-                      aria-describedby="cyr"
-                    /><span id="cyr">Cocina y repostería</span><br />
-                    <input
-                      type="checkbox"
-                      name="temInt"
-                      aria-describedby="liter"
-                    /><span id="liter">Literatura</span><br />
-                    <input
-                      type="checkbox"
-                      name="temInt"
-                      aria-describedby="viajes"
-                    /><span id="viajes">Viajes</span>
-                    <p id="einteres"></p>
-                  </fieldset>
-                </td>
-              </tr>
-            </fieldset>
+                  -
+                  <input
+                    type="text"
+                    id="numero"
+                    name="telnum"
+                    aria-label="numero"
+                  />
+                </fieldset>
+              </td>
+            </tr>
+            <tr>
+              <td>Temas de interés</td>
+              <td>
+                <fieldset>
+                  <legend class="oculto">
+                    Selecciona una o más opción de género
+                  </legend>
+                  <input
+                    type="checkbox"
+                    name="temInt"
+                    aria-describedby="cyt"
+                  /><span id="cyt">Ciencia y tecnología</span><br />
+                  <input
+                    type="checkbox"
+                    name="temInt"
+                    aria-describedby="mya"
+                  /><span id="mya">Música y artes</span><br />
+                  <input
+                    type="checkbox"
+                    name="temInt"
+                    aria-describedby="cyr"
+                  /><span id="cyr">Cocina y repostería</span><br />
+                  <input
+                    type="checkbox"
+                    name="temInt"
+                    aria-describedby="liter"
+                  /><span id="liter">Literatura</span><br />
+                  <input
+                    type="checkbox"
+                    name="temInt"
+                    aria-describedby="viajes"
+                  /><span id="viajes">Viajes</span>
+                  <p id="einteres"></p>
+                </fieldset>
+              </td>
+            </tr>
 
             <tr>
               <td colspan="2">
