@@ -29,6 +29,40 @@ textarea {
   display: block;
 }
 
+input[type="radio"]:checked + label {
+  outline: red 0.3rem solid;
+}
+
+input[type="checkbox"]:checked + label {
+  outline: red 0.3rem solid;
+}
+
+input[type="radio"]:hover + label {
+  outline: red 0.3rem solid;
+}
+
+input[type="checkbox"]:hover + label {
+  outline: red 0.3rem solid;
+}
+
+input[type="checkbox"]:focus + label {
+  outline: red 0.3rem solid;
+}
+input[type="text"]:focus {
+  outline: red 0.3rem solid;
+}
+
+input[type="password"]:focus {
+  outline: red 0.3rem solid;
+}
+input[type="number"]:focus {
+  outline: red 0.3rem solid;
+}
+
+select:focus {
+  outline: red 0.3rem solid;
+}
+
 form input[type="button"],
 form button,
 input[type="submit"] {

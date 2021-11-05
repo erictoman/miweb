@@ -12,10 +12,9 @@
   </head>
   <body>
     <header id="header">
-      <div>
-        <a href="#header" class="color-blanco">Ir al encabezado</a
-        ><a href="#main" class="color-blanco">Ir al contenido</a
-        ><a href="#footer" class="color-blanco">Ir al pie de pagina</a>
+      <div tabindex="0">
+        <a href="#menubar" class="color-blanco">Ir al menu</a
+        ><a href="#main" class="color-blanco">Ir al contenido</a>
       </div>
       <div class="relleno clearfix">
         <div class="bar">
@@ -25,14 +24,14 @@
           <p><a href="registro.html">Registrarme / Iniciar sesión</a></p>
         </div>
       </div>
-      <id id="menubar" aria-label="Menu principal">
+      <nav id="menubar" aria-label="Menu principal de mi sitio">
         <ul role="menubar">
           <li role="none">
             <a
               id="menuInicio"
               href="index.html"
               role="menuitem"
-              aria-current="page"
+              aria-current="false"
               >Inicio</a
             >
           </li>
@@ -42,7 +41,7 @@
               id="menuNosotros"
               href="nosotros.html"
               role="menuitem"
-              aria-current="false"
+              aria-current="page"
               >Nosotros</a
             >
           </li>
@@ -50,7 +49,6 @@
             <a
               href="#"
               id="menuTienda"
-              onclick="preventDefault(e);"
               class="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
@@ -98,19 +96,19 @@
             >
           </li>
         </ul>
-      </id>
+      </nav>
       <!--end menu-->
       <script src="menu/menu.js"></script>
     </header>
 
     <main id="main">
-      <h1 tabindex="0">Nosotros</h1>
+      <h1 tabindex="0" class="titulo_principal">Nosotros</h1>
       <div id="contAcordeon">
         <div id="acordeon">
           <div>
-            <p class="acordtema" id="mision">
+            <h2 class="acordtema" id="mision">
               <button id="bmision" aria-expanded="false">Misión</button>
-            </p>
+            </h2>
             <div role="region" aria-labelledby="bmision" class="subacord">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit sodales
@@ -135,9 +133,9 @@
             </div>
           </div>
           <div>
-            <p class="acordtema" id="vision">
+            <h2 class="acordtema" id="vision">
               <button id="bvision" aria-expanded="false">Visión</button>
-            </p>
+            </h2>
             <div role="region" aria-labelledby="bvision" class="subacord">
               <p>
                 Iaculis pretium primis imperdiet libero ut montes fermentum
@@ -155,9 +153,9 @@
             </div>
           </div>
           <div>
-            <p class="acordtema" id="objetivo">
+            <h2 class="acordtema" id="objetivo">
               <button id="bobjetivo" aria-expanded="false">Objetivo</button>
-            </p>
+            </h2>
             <div role="region" aria-labelledby="bobjetivo" class="subacord">
               <p>
                 Mi nec gravida conubia neque, non a ut pulvinar, id pellentesque
@@ -183,9 +181,9 @@
             </div>
           </div>
           <div>
-            <p class="acordtema" id="lema">
+            <h2 class="acordtema" id="lema">
               <button id="blema" aria-expanded="false">Lema</button>
-            </p>
+            </h2>
             <div role="region" aria-labelledby="blema" class="subacord">
               <p>
                 Volutpat fusce pellentesque nascetur erat diam mus libero netus,

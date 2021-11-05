@@ -11,12 +11,15 @@ function valida() {
 
   if (nombre == "") {
     enombre.innerHTML = "Campo nombre obligatorio";
-    errores.push("Campo nombre obligatorio");
+    errores.push({ elemento: "#nombre", mensaje: "Campo nombre obligatorio" });
   } else {
     enombre.innerHTML = "";
     if (specials(nombre) == 1) {
       enombre.innerHTML += "El campo contiene caracteres inválidos";
-      errores.push("El campo contiene caracteres inválidos");
+      errores.push({
+        elemento: "#nombre",
+        mensaje: "El campo contiene caracteres inválidos",
+      });
     } else {
       enombre.innerHTML = "";
     }
@@ -24,7 +27,7 @@ function valida() {
 
   if (correo == "") {
     ecorreo.innerHTML = "Campo correo obligatorio";
-    errores.push("Campo correo obligatorio");
+    errores.push({ elemento: "#correo", mensaje: "Campo correo obligatorio" });
   } else {
     ecorreo.innerHTML = "";
     var filtro_correo = new RegExp(
@@ -32,7 +35,10 @@ function valida() {
     );
     if (!filtro_correo.test(correo)) {
       ecorreo.innerHTML = "El campo correo contiene caracteres inválidos";
-      errores.push("El campo correo contiene caracteres inválidos");
+      errores.push({
+        elemento: "#correo",
+        mensaje: "El campo correo contiene caracteres inválidos",
+      });
     } else {
       ecorreo.innerHTML = "";
     }
@@ -40,12 +46,18 @@ function valida() {
 
   if (mensaje == "") {
     emensaje.innerHTML = "Campo mensaje obligatorio";
-    errores.push("Campo mensaje obligatorio");
+    errores.push({
+      elemento: "#mensaje",
+      mensaje: "Campo mensaje obligatorio",
+    });
   } else {
     emensaje.innerHTML = "";
     if (specials(mensaje) == 1) {
       emensaje.innerHTML += "El campo contiene caracteres inválidos";
-      errores.push("El campo contiene caracteres inválidos");
+      errores.push({
+        elemento: "#mensaje",
+        mensaje: "El campo contiene caracteres inválidos",
+      });
     } else {
       emensaje.innerHTML = "";
     }
@@ -66,9 +78,12 @@ function valida() {
     mensajes.innerHTML = "";
     let list = document.createElement("ul");
     for (let error of errores) {
+      console.log(error);
       var item = document.createElement("li");
-      item.appendChild(document.createTextNode(error));
-      item.tabIndex = 0;
+      var a = document.createElement("a");
+      a.appendChild(document.createTextNode(error.mensaje));
+      a.href = error.elemento;
+      item.appendChild(a);
       list.appendChild(item);
     }
     var mensaje = document.createElement("p");
